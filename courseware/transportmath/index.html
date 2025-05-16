@@ -1,0 +1,76 @@
+<head><title>Transport Math</title></head>
+<body>
+<h1>Transport Math</h1>
+<p>In this series of short lectures I cover the key points in mathematical techniques useful for solving transport problems (or indeed many problems in engineering).  These are designed as a "reminder" tool, as the techniques would have been covered in your various math classes and text books.  Math is easy to forget, however, and thus such a reminder is likely to be very useful, particularly when learning transport: if you've got the math down, the physics of transport is a lot easier to follow!  While many topics are included, I've also left off some rather important areas such as systems of linear equations, optimization, and advanced techniques such as index notation (-very- useful in fluid mechanics, however this material is also covered elsewhere on the website).  The primary focus is on the calculus of ordinary and partial differential equations, which is often the material students find most elusive.</p>
+
+<p>Most of this material is drawn from the contents of your calculus and differential equations classes.  Some is drawn from your Numerical and Statistical Analysis course, some from Transport I (e.g., scaling and self-similar solutions) and some we will be going over in Transport II (primarily separation of variables and Monte Carlo calculations).  Thus, if any of this material isn't clear - don't forget to ask about it in class!</p>
+
+<h2>Transport Math Notes</h2>
+<p>A PDF file of the notes is given <a href="transport math.pdf">here</a>.</p>
+
+<h2>Video Narrations</h2>
+<ul>
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=314cab0a-d878-43b5-8d1f-af04016c3702">0 Introduction</a></h3>
+<p>In this short video I provide an introduction to the topics we will discuss.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8d96d2fe-32b5-41cf-867b-af7f01616b7c">1 Differentiation</a></h3>
+<p>In this video I talk about differentiation, including how to use differentiation by parts and chain rule differentiation for more complicated problems</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b1d8eb4-8da1-4179-9ad1-aec20161d46b">2 Integration</a></h3>
+<p>The opposite of differentiation is integration.  In this video I discuss some common integrals, methods for evaluating integrals via integration by parts, and multiple integrals for multidimensional problems.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ab08bddf-a187-441c-8a69-aec20161d46e">3 The Taylor Series</a></h3>
+<p>A massively useful tool, the Taylor Series (particularly for the case when expanded around zero) is described.  Application to linearization of a function (useful in simplifying differential equations), series representations, and derivation of high order finite difference representations are discussed.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=265e3fb9-8b63-4858-9fdb-aee1012a5154">4 First Order Linear ODEs</a></h3>
+<p>There aren't many guarantees in differential equations, but this class has an analytic solution you can simply write down - very useful as it appears in all sorts of problems!  Application to interest calculations is discussed, as is the method where you can (occasionally) reduce a higer order ODE to a first order ODE and simply write down the solution.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e71669c0-cf55-4a75-84a5-aef900f3ff3e">5 Higher Order Linear ODEs</a></h3>
+<p>Higher order linear ODEs are discussed, where the solution is broken into the sum of particular and homogenous solutions.  The techniques are demonstrated for the solution of the resonance equations.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f09eab82-f7c7-417b-ab0d-aef900f3ff57">6 Special High Order Linear ODEs</a></h3>
+<p>Most high order linear ODEs are difficult to solve, however two (which often appear in engineering problems) have a simple solution: Constant coefficient ODEs and Euler equations.  These are actually very closely related, and their solutions are discussed.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1366407a-1f38-44fa-abd7-aef900f3ff38">7 Solving ODEs via Transformation</a></h3>
+<p>ODEs, and in particular non-linear ODEs, are often tricky to solve.  Here we look at three approaches that sometimes work: inversion (for first order non-linear problems), formation of perfect differentials, and transformation of the independent variable.  Examples of each are provided.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=054122ef-8d4d-495e-9dbf-af04016c842b">8 Dependent Variable Transformation</a></h3>
+<p>A further approach which sometimes works is transformation of the dependent variable - in this case turning a rather complicated ODE into a constant coefficient one where we can simply write down the answer.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0559cd9e-23f9-44c4-909c-af04016c36fc">9 Numerical Solutions</a></h3>
+<p>While exact solutions to ODEs are nice, getting numerical solutions is often just as useful - and can be much easier.  I discuss how you can convert higher order ODEs into systems of first order ODEs which can be integrated using canned solvers.  In addition, the issue of boundary conditions is addressed via the "shooting method" to determine unknown initial conditions.  As an example, this approach is implemented for the Falkner-Skan problem in the short function <a href="fsmiss.m">fsmiss.m</a> which can be run from the Matlab command line using the command fminsearch('fsmiss',1)</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=42a11200-6ddf-4c7c-951b-af04016c3702">10 Runge-Kutta Integration</a></h3>
+<p>Usually you will find it convenient to use a canned solver, however sometimes it is more convenient to write your own code.  Here we see where the Runge-Kutta integration method comes from and its limitations.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=75cad1d8-3b8d-4d73-8cd5-af0e01056b4c">10a Numerical Example</a></h3>
+<p>In this lecture I discuss code which implements all the numerical solution techniques described above - the code is provided as well, which provides a useful template.  The exampe code is <a href="numsolexample.m">numsolexample.m</a></p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c582dbd5-a5af-4a35-99a5-af04016c36fa">11 Sturm-Liouville Theory</a></h3>
+<p>Many problems in engineering produce a Sturm-Liouville boundary value problem.  Here I discuss the general theorem and apply it to a specific example.  It will be used again later when discussing solution of differential equations via separation of variables.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e2a4435c-62c3-4a48-b665-af7b015dbd9b">12 PDEs: Div, Grad & Curl</a></h3>
+<p>We turn from ODEs to PDEs and discuss the key operators such as divergence, gradient, curl, laplacian, etc..  In addition the divergence theorem is introduced.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4b509e81-c0ff-4677-b89f-af900178be4d">13 Solving PDEs via Simplification</a></h3>
+<p>PDEs are intrinsically harder to solve than ODEs.  Here we discuss two methods for making your life easier: simplifying by making sure to use a coordinate system in which the boundary has a convenient representation, and simplification by allowing the boundary condition to suggest the form of the solution.  Solving periodic problems via analytic continuation into the complex plane is also demonstrated.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4305b1c0-7ed5-47e7-9c12-af7b015dbd9f">14 Simplification and Estimation via Scaling</a></h3>
+<p>An extremely useful technique for approaching PDEs (and sometimes ODEs too) is rendering them dimensionless via scaling.  In this lecture I demonstrate how scaling of the transport equations can give you almost everything you are interested in without ever actually solving the problem.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=999ff449-e91e-43f5-8a26-af7b015dbd9f">15 Solving PDEs via Self-Similarity</a></h3>
+<p>Some very important transport problems admit self-similarity: a technique for reducing the number of independent variables a problem depends on (e.g., turning a 2-D PDE into an ODE).  Here I introduce Morgan's Theorem and show how you can accomplish this via simple affine stretching.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=617afbac-bb59-4c84-9d17-af7f01616b7b">16 Solving PDEs via Separation of Variables</a></h3>
+<p>Certain linear PDEs (including transport equations under certain conditions) can be solved via the technique of separation of variables.  This yields a Sturm-Liouville boundary value problem for the spatial part (for startup flows).  The technique is applied to the classic problem of startup flow in a tube.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6529db3d-2ffe-4703-9748-af7f01616b78">16a Numerical Solution of Separation of Variables Problems</a></h3>
+<p>It's always nice to have an analytic solution to the Sturm-Liouville problems arising from separation of variables, but they can get messy - and for many classic problems no analytic solution exists!  In this video I introduce <a href="slsolve.m">slsolve.m</a>, a finite difference solver for SL problems in standard form that I wrote decades ago for the sophomore NumStats class.  This is applied to the startup flow in a pipe problem and compared to the analytic solution in the code <a href="tubestartup.m">tubestartup.m</a>.
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3b7cac3f-f7e0-4646-94eb-af7f01616b79">17 Solving PDEs via Marching Solutions</a></h3>
+<p>Many problems can't be solved via any of the techniques above (although scaling is *always* useful!), so the last resort is numerical solutions.  Here I discuss the simplest approach: the explicit forward Euler finite difference solution technique as applied to parabolic PDEs such as the heat equation or startup flow in a pipe.  The code which produces a movie of the process is <a href="startupmovie.m">startupmovie.m</a>.</p>
+
+<li><h3><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9cee06e3-2b77-42ab-8683-af7f0161978a">18 Monte Carlo Solutions to Diffusion Problems</a></h3>
+<p>A very different way of solving transient diffusion (and convective diffusion) problems numerically is via Monte Carlo (or Brownian Dynamics) simulations.  The idea is that you can use "tracers" to represent mass or energy and follow them along as diffusion gives them a random walk "kick" at each time step.  Very computationally intensive, but also very very easy to code up for problems where this approach is amenable.  The example code for a quenched cube is <a href="cubequench.m">cubequench.m</a>.
+</ul>
+</body>
