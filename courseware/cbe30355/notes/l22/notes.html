@@ -1,0 +1,67 @@
+<TITLE>CBE 30355 - Transport I</TITLE>
+<H1>CBE 30355 - Lecture Notes - Nov. 18, 2025</H1>
+
+<h2>Announcements</h2>
+<ul></ul>
+
+<hr>
+<h2>Class notes</h2>
+Read through pages 270-282 of the notes and view the online narration below.  Don't forget to complete the quiz in Canvas!
+<br>
+<iframe src="https://notredame.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=05383435-7956-4a57-aefe-ac5601688c11&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<br>
+The main points of the lecture were
+<ul>
+<li>The Blasius Equation
+</ul>
+
+<hr>
+<h2>Goals:</h2>
+After this class you should be able to:
+<ul><li>Apply Morgan's Theorem to obtain similarity solutions to boundary layer problems.
+</ul>
+
+<hr>
+<h2>Reading</h2>
+<ul>
+<li>The class notes.
+<li>BS&L, chapter 4
+</ul>
+<!--
+<hr>
+<h2>Additional Readings:</h2>
+<ul>It may be getting a bit chilly outside, but soon it will be warm again (OK, I'm an 
+optimist)!  An interesting application of Bernoulli's equation to summer activities is the 
+air-powered squirt gun, AKA the Super Soaker.  To see detailed information on how 
+such squirt guns work, check out the link given 
+<a href="http://www.howstuffworks.com/water-blaster.htm">here</a>.
+</ul>
+-->
+<hr>
+<h2>Demonstration:</h2>
+<ul>
+A classic demonstration is the “Tea Leaf Paradox”, the observation that after stirring a tea cup with leaves on the bottom, the leaves will migrate to the center and accumulate in a puddle, the opposite of what would be expected from centrifugal forcing.  The explanation is the very strong inertial secondary current resulting from centrifugal force along curved streamlines.  This is the same effect which, for example, causes a river bed to meander (e.g., Einstein, 1926) and is found in very many systems.  In this demonstration we not only look at the accumulation of the tea leaves in the center when slowing down, but also look at what happens when the vessel is first accelerated.  The latter case is an example of flows which are used in electrochemistry (rotating disk electrodes) and in rotating membranes - and a great example of boundary layer flows.
+</ul>
+
+<hr>
+<h2>Computer Example:</h2>
+<ul>Boundary layer problems such as the Blasius Equation for flow past a flat plate yield non-linear ODE's once we've applied Morgan's Theorem.  While these equations don't typically have analytic solutions, they are extremely simple to solve using ODE solvers as a system of first order differential equations.  Because they usually have boundary conditions (rather than all the necessary initial conditions), you can "guess" the missing initial conditions, integrate the equations, and adjust the initial condition until the boundary condition is satisfied (called the shooting method, as it is analogous to doing artillery ranging shots).  Such a program for the Blasius problem is given in the file <a href="miss.m">miss.m</a>.  If you call this using a root solver it will yield the unknown initial condition (the dimensionless scaled shear stress at the plate).  I've also tracked out the displacement thickness as an extra first order equation.  This isn't necessary, but is far more convenient than integrating it later after the velocity profile is already solved.
+</ul>
+
+<hr>
+
+<ADDRESS>
+<a href="mailto:dtl@nd.edu">
+David.T.Leighton.1@nd.edu</a>
+</ADDRESS>
+
+
+
+
+
+
+
+
+
+
+
