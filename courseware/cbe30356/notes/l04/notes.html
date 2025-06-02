@@ -1,0 +1,75 @@
+<TITLE>CBE 30356 - Transport II</TITLE>
+<H1>CBE 30356 - Lecture Notes - January 26, 2023</H1>
+
+<h2>Announcements</h2>
+<ul>
+<li>
+</ul>
+
+<hr>
+<h2>Class notes</h2>
+Read through pages 39-49 of the notes and view the online narration below.  Don't forget to complete the quiz in Canvas!
+<br>
+<iframe src="https://notredame.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6b4df3d7-eb3d-4a19-ba45-ae12012340d4&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<br>
+The main points of the lecture were
+<ul>
+<li>Cooling Fins
+<li>Summary of heat transfer coefficients (so far)
+</ul>
+
+<hr>
+<h2>Goals:</h2>
+After this class you should be able to:
+<ul>
+<li>Determine the rate of heat transfer due to a cooling fin or rod.
+<li>Know where heat transfer coefficients come from in various geometries.
+</ul>
+
+<hr>
+<h2>Reading</h2>
+<ul>
+<li>The class notes.
+<li>BS&L, 10.7, 10.8
+</ul>
+
+<hr>
+<h2>Problem of the Day</h2>
+<ul>In this problem we look at the temperature distribution in a cooling fin, but where the heat loss is via radiation only (e.g., in space).  A back of the envelope scaling analysis is given <a href="pod04.pdf">here</a> and the numerical program to solve the differential equation is given <a href="pod04sol.m">here</a> which calls the little function <a href="miss.m">miss.m</a>.
+</ul>
+
+<hr>
+<h2>Demonstration:</h2>
+<ul>Cooling from a rod: temperature as a function of position in the presence of forced convection.  The notes describing the analysis - including an analysis which looks at errors in our approximations - is given <a href="cooling rod demo notes.pdf">here</a> and the little plotting program is <a href="rodplot.m">rodplot.m</a>.
+
+<!--This has now been changed, using the red/yellow thermochromic paint.  The rod is put in an ice water bath, and the lab hair dryer is now run on max heating.  You get a color change about half-way up when the blower is 17 inches away, and have a wind speed of about 8m/s.  I think that the dominant sources of error are using too high of a thermal conductivity of the aluminum (who knows what alloy it is!) and not mixing the bath (so you get a delta T down there too due to a low heat transfer coefficient from the natural convection.
+
+This works pretty well with the aluminum rod (drilled to accept the 40W soldering iron, which lives in the stained glass toolbox in the basement) and the blower from the UG lab experiment.  The flow is actually too high, so you need to put the blower on a separate table.  If separated around 3 ft you get a flow so that the first couple of paperclips (and make sure there's a big gob of wax on the floss) to fall.  Moving the blower further away causes another couple to fall, and turning it off causes the last two to fall pretty quickly.-->
+</ul>
+
+<hr>
+<ADDRESS>
+<a href="mailto:dtl@nd.edu">
+David.T.Leighton.1@nd.edu</a>
+</ADDRESS>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
