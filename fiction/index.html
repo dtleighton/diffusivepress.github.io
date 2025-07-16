@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Just For Fun | Diffusive Press</title>
+ <title>Just For Fun | Diffusive Press</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
@@ -46,13 +46,24 @@
       margin-bottom: 1em;
     }
 
-    .under-construction {
-      background-color: #fff3cd;
-      border-left: 6px solid #ffeeba;
-      padding: 1em;
-      font-size: 1.1em;
-      margin-top: 2em;
-      border-radius: 5px;
+    .book-entry {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5em;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .book-entry img {
+      width: 160px;
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .book-details {
+      flex: 1;
+      min-width: 250px;
     }
 
     a {
@@ -76,18 +87,42 @@
   <h1>Diffusive Press</h1>
   <h2><em>Just For Fun. Because there's more to life than study.</em></h2>
 
-  <h3>Coming Soon: Fiction from Diffusive Press</h3>
+  <h3>The Not-So-Serious Books of Diffusive Press</h3>
 
-  <p>
-    This section of Diffusive Press will highlight imaginative works from our in-house authors—tales of mystery, science fiction, fantasy, and more.
-  </p>
+  <div class="book-entry">
+    <img src="../resources/welcometoashendowncover.jpg" alt="Welcome to Ashendown Cover">
+    <div class="book-details">
+      <p>
+        <strong><a href="https://www.amazon.com/Welcome-Ashendown-Emmerian-Chronicles-Leighton/dp/B0FG5TLRM7/">
+        Welcome to Ashendown: Book I of the Emmerian Chronicles</a></strong><br>
+        <em>Eleanor T. Leighton</em>
+      </p>
 
-  <div class="under-construction">
-    📚 We're still building this section. Stories are being polished, covers designed, and adventures prepared. Stay tuned!
+      <p>
+        Fifteen year-old Emmerian Storlock is on the verge of choosing his future career path when disaster strikes his hometown. Magic, that mysterious force that intertwines subtly with almost every part of life in the country of Mylloria, has been acting strangely lately. Rising magic levels throughout his country have caused dangerously large spontaneous magical outbreaks called Events to pop up unexpectedly all over the place. The luckless Emmerian is caught in the wrong place at the right time when an Event manifests itself in the form of a very hungry hundred-foot tall mud demon. In order to save his life, Emmerian pulls out all the stops… and lives! Surviving a disaster like that would usually be a great thing, but unfortunately there were witnesses to his heroic act. Now everyone in his hometown (including his tyrannical mother) is convinced that he’s about to become a great adventurer! …Except that he doesn’t want to be one. He starts plotting…
+      </p>
+
+      <p>
+        Available in ebook and trade paperback from <a href="https://www.amazon.com/Welcome-Ashendown-Emmerian-Chronicles-Leighton/dp/B0FG5TLRM7/">Amazon</a>.
+      </p>
+    </div>
   </div>
 
-  <p style="margin-top: 3em;">
-    Questions or early access requests? Contact us at <a href="mailto:info@diffusivepress.org">info@diffusivepress.org</a>.
-  </p>
+<!--
+ <div class="book-entry">
+    <img src="../resources/hatcomesbackcover.jpg" alt="The Hat Comes Back Cover">
+    <div class="book-details">
+      <p>
+        <strong><a href="acompendium.pdf">
+        The Hat Comes Back: Book II of the Emmerian Chronicles</a></strong><br>
+        <em>Eleanor T. Leighton</em>
+      </p>
+
+      <p>
+        Many faculty find it challenging to come up with problems for exams and homework assignments - a common complaint.  In this book are gathered hundreds of problems which have been developed over 40 years of teaching Transport at Notre Dame.  The PDF is available free of charge for educational, non-commercial applications, and the transportproblems.zip file containing all LaTeX scripts, templates, and AI prompts for generating both this Compendium as well as new problems is available to faculty on request from <a href="mailto:info@diffusivepress.org">diffusivepress.org</a>.
+      </p>
+    </div>
+  </div>
+-->
 </body>
 </html>
