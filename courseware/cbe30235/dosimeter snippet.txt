@@ -1,0 +1,99 @@
+\section{Detection and Measurement: Making the Invisible Visible}
+
+Throughout this lecture, we have discussed decay rates and particle energies, but how do we actually measure them? Almost all radiation detectors rely on a single fundamental mechanism: \textbf{Ionization}. The detector acts as a transducer, converting the microscopic ionization event into a macroscopic signal (electrical, visual, or chemical).
+
+\subsection{Gas-Filled Detectors (Ionization in a Gas)}
+The most common class of detectors uses a gas volume placed between two charged electrodes. When radiation passes through, it ionizes gas atoms, creating electron-ion pairs.
+
+\subsubsection{The Geiger-Müller (GM) Counter}
+The "workhorse" of radiation safety. A high voltage is applied across the gas such that a single ionization event triggers a cascading \textbf{Townsend Avalanche} of electrons.
+\begin{itemize}
+    \item \textbf{Mechanism:} One electron frees two, which free four, resulting in millions of electrons hitting the anode wire.
+    \item \textbf{The Output:} A large, uniform electrical pulse (the "click").
+    \item \textbf{Limitation:} The GM counter is a binary switch. It tells you \textit{that} a particle hit it, but not \textit{what} kind or \textit{how much} energy it had. It cannot distinguish between a low-energy Beta and a high-energy Gamma.
+\end{itemize}
+
+
+
+\subsubsection{The Cloud Chamber}
+While the GM counter amplifies ionization \textit{electrically}, the cloud chamber amplifies it \textit{thermodynamically}.
+\begin{itemize}
+    \item \textbf{Mechanism:} The chamber creates a "supersaturated" vapor (usually alcohol). The vapor is desperate to condense but lacks a nucleation site. The ions left behind by a passing particle act as "seeds" for condensation.
+    \item \textbf{The Output:} A visible trail of liquid droplets tracing the exact path of the particle.
+    \item \textbf{Particle ID:} Unlike the GM counter, the visual track reveals the physics:
+    \begin{itemize}
+        \item \textbf{Alphas:} Short, thick, straight tracks (high ionization density).
+        \item \textbf{Betas:} Wispy, erratic, zigzag tracks (low mass, easily deflected).
+        \item \textbf{Muons:} Long, straight, penetrating tracks.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Scintillation Detectors (Ionization in a Solid)}
+To measure \textbf{energy} (Spectroscopy), we use dense crystals (like Sodium Iodide, NaI) instead of gas.
+\begin{itemize}
+    \item \textbf{Mechanism:} Ionization excites electrons in the crystal lattice. When they relax, they emit a flash of visible light (\textit{scintillation}).
+    \item \textbf{Proportionality:} The brightness of the flash is directly proportional to the energy of the incident particle. By measuring the light intensity, we can identify the specific isotope (e.g., distinguishing $^{137}\text{Cs}$ from $^{60}\text{Co}$).
+\end{itemize}
+
+
+
+\subsection{Dosimeters (Integrating Detectors)}
+While the detectors above measure \textit{rate} (counts per second), dosimeters measure the \textit{total accumulated dose} over time.
+
+\subsubsection{Photographic Film Badges (The "Old School" Method)}
+You are correct that this operates on ionization.
+\begin{itemize}
+    \item \textbf{Mechanism:} Radiation strikes silver halide grains in the film emulsion, ionizing the silver atoms (just like light does in a camera). This creates a "latent image."
+    \item \textbf{Readout:} When developed, the film darkens. The "Optical Density" (darkness) is proportional to the total dose received. Filters (plastic, copper, aluminum) placed over the film allow health physicists to distinguish between beta, gamma, and X-ray doses based on penetration depth.
+\end{itemize}
+
+\subsubsection{Thermoluminescent Dosimeters (TLD) (The Modern Standard)}
+Most engineers today wear TLDs (rings or badges) which use crystal chips (e.g., Lithium Fluoride) rather than film.
+\begin{itemize}
+    \item \textbf{Mechanism:} Ionization kicks electrons into "traps" (imperfections) within the crystal lattice, where they remain stuck.
+    \item \textbf{Readout:} The lab heats the crystal. The thermal energy shakes the electrons loose from the traps. As they fall back to the ground state, they release the stored energy as light. The total light emitted is proportional to the total radiation dose received months prior.
+\end{itemize}
+
+\section{Case Study: The "Perfect" Poison (The Litvinenko Assessment)}
+
+In November 2006, Alexander Litvinenko, a former Russian security officer, was assassinated in London using **Polonium-210**. This event serves as a grim but definitive case study in the engineering distinction between \textbf{External Hazard} and \textbf{Internal Dose}.
+
+\subsection{The Physics of the Weapon: Polonium-210}
+Polonium-210 ($^{210}\text{Po}$) is a nearly pure alpha emitter produced by neutron bombardment of Bismuth-209 in a high-flux nuclear reactor.
+\begin{itemize}
+    \item \textbf{Decay Mode:} Alpha decay to stable Lead-206 ($^{206}\text{Pb}$).
+    \item \textbf{Alpha Energy:} 5.3 MeV.
+    \item \textbf{Gamma Emission:} Negligible ($< 0.001\%$ of decays).
+    \item \textbf{Half-Life:} 138 days (High specific activity, meaning a tiny mass yields a massive dose).
+\end{itemize}
+
+\subsection{The Engineering Failure: Why Detection Was Missed}
+Litvinenko presented with symptoms of severe radiation sickness (hair loss, immune failure), yet he was not diagnosed for weeks. Why?
+
+\subsubsection{1. The Shielding Paradox (External Detection)}
+Standard security measures failed because of the alpha particle's short range.
+\begin{itemize}
+    \item \textbf{The Container:} The poison was likely transported in a simple glass vial or commercial beverage container.
+    \item \textbf{The Physics:} A 5.3 MeV alpha particle travels less than $40 \, \mu\text{m}$ in glass. The container walls ($> 1000 \, \mu\text{m}$) absorbed 100\% of the radiation.
+    \item \textbf{The Survey:} A standard Geiger-Müller counter held inches from the assassin's bag would read \textbf{Background levels}. Without gamma rays to penetrate the container, the source was invisible.
+\end{itemize}
+
+
+
+\subsubsection{2. The Biological Catastrophe (Internal LET)}
+While harmless outside the body (stopped by the dead layer of the epidermis), alpha particles are the most destructive type of radiation once ingested.
+\begin{itemize}
+    \item \textbf{High LET (Linear Energy Transfer):} Alpha particles are heavy ($^{4}\text{He}$ nuclei) and doubly charged ($+2$). They plow through tissue like a bulldozer, depositing all their energy in a very short distance ($\sim 50 \, \mu\text{m}$, or about 5 cell diameters).
+    \item \textbf{The Quality Factor ($Q$):} In calculating dose equivalent (Sieverts), alpha particles are assigned a Weighting Factor ($w_R$) of \textbf{20}.
+    \begin{equation}
+        \text{Dose (Sv)} = \text{Absorbed Dose (Gy)} \times 20
+    \end{equation}
+    This means 1 Joule of alpha energy does \textbf{20 times the biological damage} of 1 Joule of gamma or beta energy. The massive double-strand DNA breaks are almost impossible for cells to repair.
+\end{itemize}
+
+\subsection{The Forensic Trace}
+The assassination was ultimately uncovered not by a Geiger counter, but by \textbf{Alpha Spectroscopy} on biological samples (urine). Once identified, investigators could trace the path of the poison (teapots, hotel rooms, airplane seats) because minute traces of Po-210 had escaped the container or been excreted by the assassins.
+
+\begin{quote}
+    \textbf{Engineering Lesson:} "Non-detectable" does not mean "Safe." A survey meter only tells you what is penetrating the probe wall. If you suspect an alpha hazard, you must use an open-window probe (Pancake) or take swipe samples for laboratory analysis.
+\end{quote}
